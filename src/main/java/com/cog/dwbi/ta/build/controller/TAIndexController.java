@@ -1,4 +1,4 @@
-package com.cognizant.dwbi.ta.build.controller;
+package com.cog.dwbi.ta.build.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

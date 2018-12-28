@@ -1,4 +1,4 @@
-package com.cognizant.dwbi.ta.build;
+package com.cog.dwbi.ta.build;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
