@@ -1,0 +1,7 @@
+<!DOCTYPE web-app PUBLIC>
+<web-app>
+    <display-name></display-name>
+    <welcome-file-list>
+        <welcome-file>Index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

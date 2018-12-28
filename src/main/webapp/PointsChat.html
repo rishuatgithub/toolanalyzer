@@ -1,0 +1,21 @@
+<div class="card text-left" ng-controller="evaluatePointCntrl">
+
+    <div class="card-body ">
+
+        <a ng-href="#!points"><img src="stylesheet/images/chat-bot-title.svg" width="50" height="50"></a>
+
+        <div class="d-flex justify-content-center">
+            <div class="col-sm-10 " id="conversation"></div>
+        </div>
+
+        <div class="text-center">
+            <form id="chatform" ng-submit="pushChat()">
+                <input type="text" id="chat" placeholder="Start with saying Hi ... ">
+                <span id="wait" ng-if="wait == 'Y'"><i class="fa fa-spinner fa-spin" style="font-size:20px"></i></span>
+            </form>
+        </div>
+
+
+    </div>
+
+</div>

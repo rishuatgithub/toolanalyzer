@@ -1,0 +1,33 @@
+
+.filter div{
+    border:0px solid red;
+    width: 240px !important;
+    margin-bottom: 5px;
+}
+
+#vlargetext {
+    font-size: 35px;
+}
+
+#smalltext{
+    font-size: 10px;
+}
+
+#mediumtext{
+    font-size: 20px;
+}
+
+.tooltext{
+    padding-top: 10px;
+}
+
+.widget_chart{
+    border: 0px solid red !important;
+
+}
+
+#base {
+    border:0px solid red;
+    padding-right: 10px;
+    margin-left: -10px;
+}

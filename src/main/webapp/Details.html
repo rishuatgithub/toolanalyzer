@@ -1,0 +1,40 @@
+<h4><strong>Detailed Section</strong></h4>
+<br>
+<div ng-controller="detailscntrl">
+    <div ng-repeat="y in detailsdata | unique:'level1'">
+        <div class="row">
+            <div class="col-sm-10 text-info align-middle"><h5><strong> {{y.level1}}</strong></h5></div>
+            <div class="col align-middle">Weightage: {{y.weight}}</div>
+        </div>
+        <table class="table table-sm">
+            <thead class="table-dark">
+                <tr>
+                    <!-- <th scope="col" class="text-center align-middle">Level 1 Criteria</th> -->
+                    <th scope="col" class="text-center align-middle">Level 2 Criteria</th>
+                    <th scope="col" class="text-center align-middle">Level 3 Criteria</th>
+                    <!-- <th scope="col" class="text-center align-middle">Level 1 Weightage</th> -->
+                    <th scope="col" class="text-center align-middle">Cognos</th>
+                    <th scope="col" class="text-center align-middle">Business Objects</th>
+                    <th scope="col" class="text-center align-middle">Microsoft BI</th>
+                    <th scope="col" class="text-center align-middle">SAS</th>
+                    <th scope="col" class="text-center align-middle">Hyperion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in detailsdata | filter:y.level1 ">
+                    <!-- <th scope="row">{{x.level1}}</th> -->
+                    <td>{{x.level2}}</td>
+                    <td>{{x.level3}}</td>
+                    <!-- <td class="text-center">{{x.weight}}</td> -->
+                    <td class="text-center">{{x.t1}}</td>
+                    <td class="text-center">{{x.t2}}</td>
+                    <td class="text-center">{{x.t3}}</td>
+                    <td class="text-center">{{x.t4}}</td>
+                    <td class="text-center">{{x.t5}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row separator"></div>
+        <br>
+    </div>
+</div>

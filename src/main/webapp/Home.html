@@ -1,0 +1,79 @@
+<div class="row float-right filter">
+    <!-- filter section -->
+    <div class="col-sm-6">
+        <button type="button" class="btn btn-outline-info btn-sm active">2018</button>
+        <button type="button" class="btn btn-outline-info btn-sm">2017</button>
+        <button type="button" class="btn btn-outline-info btn-sm">Last 5 years</button>
+    </div>
+    <div class="col-sm-6">
+        <button type="button" class="btn btn-outline-info btn-sm active">All</button>
+        <button type="button" class="btn btn-outline-info btn-sm">ETL</button>
+        <button type="button" class="btn btn-outline-info btn-sm">BI</button>
+    </div>
+
+</div>
+
+<div class="row firstblockhome" ng-controller="widgetfirstblockhomectrl">
+    <!-- overall block -->
+    <div class="col-sm-4" ng-repeat="x in firstblockdata">
+        <div class="card">
+            <div class="card-body text-center">
+                <h6 class="card-title align-middle">{{x.widget_title}}</h6>
+                <div class="row">
+                    <div class="col tooltext"><p id="mediumtext"><strong>{{x.widget_tool}}</strong></p></div>
+                    <div class="col text-white bg-success tooltext"><p id="vlargetext">{{x.widget_index}}</p></div>
+                </div>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"><p id="smalltext">Performance Index</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row separator"></div>
+
+<h5>Performance by category</h5>
+<div class="row secondblockhome" ng-controller="widgetsecondhomectrl">
+    <!-- performance index -->
+    <div class="col-md-4" ng-repeat="y in fitment_data">
+        <div class="card">
+            <div class="card-body text-center">
+                <h6 class="card-title align-middle">{{y.component}}</h6>
+            </div>
+            <div class="row widget_chart">
+                <canvas id="base" class="chart-bar"
+                        chart-data="data" chart-labels="labels" chart-colors="color">
+                </canvas>
+            </div>
+            <div class="card-footer bg-transparent border-info">
+                <a ng-href="#!details" class="card-link">more</a>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<div class="row separator"></div>
+
+<div class="row" ng-controller="widgetthirdblockhomectrl">
+    <!-- horizontal and vertical split -->
+    <div class="col-sm-6">
+        <h5>Fitment split by Horizontal</h5>
+        <br>
+        <canvas id="polar-area-horizontal" class="chart chart-polar-area"
+                chart-data="data" chart-labels="labels" chart-options="options">
+        </canvas>
+    </div>
+
+    <div class="col-sm-6">
+        <h5>Fitment split by Vertical</h5>
+        <br>
+
+        <canvas id="polar-area-vertical" class="chart chart-polar-area"
+                chart-data="data" chart-labels="labels" chart-options="options">
+        </canvas>
+    </div>
+
+</div>
